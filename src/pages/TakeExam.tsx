@@ -74,7 +74,7 @@ type ViolationLog = Record<ViolationType, number>;
 
 
 
-const PYTHON_SERVER = import.meta.env.VITE_PYTHON_SERVER || 'https://render-python-du4a.onrender.com';
+const PYTHON_SERVER = import.meta.env.VITE_PYTHON_SERVER || 'https://render-python-1-b8m9.onrender.com';
 const FRAME_INTERVAL_MS = 5000; // Analyze a frame every 5 seconds
 const VIDEO_READY_STATE_CURRENT_DATA = 2;
 

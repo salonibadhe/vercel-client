@@ -13,7 +13,7 @@ import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
 import axios from "axios";
 
-const PYTHON_SERVER = import.meta.env.VITE_PYTHON_SERVER || 'https://render-python-du4a.onrender.com';
+const PYTHON_SERVER = import.meta.env.VITE_PYTHON_SERVER || 'https://render-python-1-b8m9.onrender.com';
 
 type Exam = {
   _id: string;
