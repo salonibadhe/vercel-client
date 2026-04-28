@@ -70,7 +70,11 @@ export type ViolationType =
 
 type ViolationLog = Record<ViolationType, number>;
 
-const PYTHON_SERVER = 'http://127.0.0.1:8000';
+
+
+
+
+const PYTHON_SERVER = import.meta.env.VITE_PYTHON_SERVER || 'https://render-python-du4a.onrender.com';
 const FRAME_INTERVAL_MS = 5000; // Analyze a frame every 5 seconds
 const VIDEO_READY_STATE_CURRENT_DATA = 2;
 
@@ -220,7 +224,8 @@ const TakeExam = () => {
           frame: base64Frame,
           reference_image: userRef.current?.profilePhoto
         }),
-        signal: AbortSignal.timeout(4000),
+        // Increase timeout to allow ML inference to complete on slower hosts
+        signal: AbortSignal.timeout(15000),
       });
 
       if (!response.ok) {
